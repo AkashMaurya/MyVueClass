@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Code with Vue.Js Framwork" />
+    <HomeView />
+    <hr>
+    <h1 style="text-align:center">Click Event on button </h1>
+    <MyButton/>
+    <hr>
+    <h1 style="text-align:center">Two way Binding </h1>
+    <TwoWayBindComponent/>
+    <hr>
+    <IfElse/>
   </div>
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import HomeView from './components/Home.vue';
+import MyButton from './components/MyButton.vue';
+import TwoWayBindComponent from './components/TwoWayBind.vue';
+import IfElse from './components/IfElse.vue';
 
 export default {
+  //  name: 'App', <= this is the root id which goes to main.js and it will mount to html
   name: 'App',
+  // write here the file of the (for register the components)
   components: {
-    HelloWorld
+    HelloWorld,
+    HomeView,
+    MyButton,
+    TwoWayBindComponent,
+    IfElse,
+
   }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Buenard&family=Kavivanar&display=swap');
+*{
+  font-family: 'Buenard', serif;
 }
+
 </style>
