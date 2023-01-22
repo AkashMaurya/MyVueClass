@@ -10,10 +10,10 @@
         <hr> -->
         <br>
 
-        <input type="text" maxlength="2" v-model="checkPersonAge"
+        <input type="text" maxlength="2" v-model="checkPersonAge" placeholder="type your age"
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-            <h1 v-if="checkPersonAge>=18">Your Are Eligible to drive</h1>
-            <h1 v-else>Your Are not Eligible to drive</h1>
+        <h1 v-if="checkPersonAge >= 18">Your Are Eligible to drive</h1>
+        <h1 v-else>Your Are not Eligible to drive</h1>
         <p>{{ checkPersonAge }}</p>
         <br>
         <br>
@@ -29,7 +29,7 @@ export default {
         return {
             show: true,
             member: '',
-            checkPersonAge: '18'
+            checkPersonAge: null
         }
     }
 }
